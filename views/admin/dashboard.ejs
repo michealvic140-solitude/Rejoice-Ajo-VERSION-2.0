@@ -1,0 +1,47 @@
+<div class="glass-panel p-10 border-yellow-500/20 mb-10">
+    <h2 class="text-xs font-black gold-text uppercase tracking-[0.5em] mb-8">System Broadcast</h2>
+    <form action="/admin/broadcast" method="POST" enctype="multipart/form-data" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="text" name="title" placeholder="Announcement Title" class="adm-input" required>
+        <select name="tag" class="adm-input">
+            <option>ANNOUNCEMENT</option>
+            <option>PROMOTIONAL</option>
+            <option>SECURITY ALERT</option>
+            <option>SERVER MAINTENANCE ALERT</option>
+            <option>GIVEAWAY</option>
+        </select>
+        <textarea name="content" placeholder="Enter message..." class="adm-input md:col-span-2 h-24"></textarea>
+        <input type="file" name="image" class="text-[10px] text-gray-500">
+        <button class="bg-yellow-500 text-black font-black py-4 rounded-xl uppercase text-[10px]">Publish to Homepage</button>
+    </form>
+</div>
+
+<div class="glass-panel p-8">
+    <table class="w-full">
+        <tbody class="divide-y divide-white/5">
+            <tr class="hover:bg-white/[0.02]">
+                <td class="py-6">
+                    <p class="font-bold text-white uppercase italic">Michael Victor</p>
+                    <p class="text-[9px] text-yellow-500 font-black">ROLE 12 | VIP TRUSTED</p>
+                </td>
+                <td class="py-6 text-right">
+                    <div class="flex flex-wrap gap-2 justify-end">
+                        <button class="adm-box">Ban</button>
+                        <button class="adm-box">Freeze</button>
+                        <button class="adm-box border-blue-500/40 text-blue-400">Review Proof</button>
+                        <button class="adm-box border-yellow-500/40 text-yellow-500">Assign VIP</button>
+                        <button class="adm-box">Kick</button>
+                        <button class="adm-box">Edit Terms</button>
+                        <button class="adm-box">Manual Remind</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<style>
+    .adm-input { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 12px; border-radius: 8px; color: white; font-size: 11px; outline: none; }
+    .adm-box { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); padding: 5px 10px; font-size: 8px; font-weight: 900; text-transform: uppercase; border-radius: 4px; color: #9CA3AF; transition: 0.3s; }
+    .adm-box:hover { border-color: #EAB308; color: white; background: rgba(234, 179, 8, 0.05); }
+    .gold-text { color: #EAB308; }
+</style>
